@@ -27,14 +27,14 @@ parser(directory, function(results, days, metadata){
 ```
 
 ## CLI
-You can also use it as a CLI app by installing it globally.
+You can also use the parser as a CLI app by installing it globally.
 
 ```sh
 $ npm install --global textual-log-parser
 ```
 
 #### Usage
-The CLI will output the results as a JSON file in the directory you are running the command from.
+The CLI will output the results as a JSON file in your current working directory.
 
 ```sh
 $ textual-log-parser --help
