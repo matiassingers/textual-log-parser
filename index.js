@@ -49,6 +49,7 @@ function readFileContent(file, callback){
   });
 
   rl.on('line', function(line){
+    // Remove empty lines, and lines with just 1 whitespace
     if(!line.length || line.length < 2)
       return;
 
