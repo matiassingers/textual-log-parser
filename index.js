@@ -53,8 +53,9 @@ function readFileContent(file, callback){
       return;
 
     // Remove "Begin Session" and "End Session"
+    // Textual changed index of the session stamps, trying to avoid stripping lines if not Textual stamps
     var indexOf = line.indexOf('—————————————');
-    if(indexOf === 0 || indexOf === 27 || indexOf === 11)
+    if(indexOf === 0 || indexOf === 11 || indexOf === 27)
       return;
 
     var date = formatDate(line, file);
