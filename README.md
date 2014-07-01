@@ -1,6 +1,12 @@
 # textual-log-parser
 > parses Textual log files and returns JavaScript objects
 
+## Features:
+- Removes empty lines and `Begin`/`End` session lines
+- Corrects missing date in timestamp from early Textual logs.
+- Formats dates consistently with local timezone data.
+
+## Module
 Point the parser to a directory of Textual logs and it'll return you objects for each line:
 ```json
 {
