@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "textual-log-parser": "cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/matiassingers/textual-log-parser"
