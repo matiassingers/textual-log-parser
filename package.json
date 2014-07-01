@@ -1,0 +1,29 @@
+{
+  "name": "textual-log-parser",
+  "version": "0.0.0",
+  "description": "Parses Textual log files and returns JavaScript objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiassingers/textual-log-parser"
+  },
+  "author": "Matias Singers <mail@matiassingers.com> (http://mts.io/)",
+  "keywords": [
+    "textual",
+    "irc",
+    "logs"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matiassingers/textual-log-parser/issues"
+  },
+  "homepage": "https://github.com/matiassingers/textual-log-parser",
+
+  "dependencies": {
+    "async": "~0.9.0",
+    "moment-timezone": "~0.1.0"
+  }
+}
