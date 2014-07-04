@@ -59,7 +59,7 @@ function readFileContent(file, callback){
 
 function formatLine(line, file){
   // Remove empty lines, and lines with just 1 whitespace
-  if(!line.length || line.length < 2)
+  if(!line || !line.length || line.length < 2)
     return;
 
   // Remove "Begin Session" and "End Session"
