@@ -49,26 +49,31 @@ function readFileContent(file, callback){
   });
 
   rl.on('line', function(line){
-    // Remove empty lines, and lines with just 1 whitespace
-    if(!line.length || line.length < 2)
-      return;
-
-    // Remove "Begin Session" and "End Session"
-    // Textual changed index of the session stamps, trying to avoid stripping lines if not Textual stamps
-    var indexOf = line.indexOf('—————————————');
-    if(indexOf === 0 || indexOf === 11 || indexOf === 27)
-      return;
-
-    var date = formatDate(line, file);
-    lines.push({
-      date: date,
-      value: line.replace(/\[([^\]]+)\]/, '').trim()
-    });
+    lines.push(formatLine(line, file));
   });
 
   rl.on('close', function(){
     callback(null, lines);
   });
+}
+
+function formatLine(line, file){
+  // Remove empty lines, and lines with just 1 whitespace
+  if(!line.length || line.length < 2)
+    return;
+
+  // Remove "Begin Session" and "End Session"
+  // Textual changed index of the session stamps, trying to avoid stripping lines if not Textual stamps
+  var indexOf = line.indexOf('—————————————');
+  if(indexOf === 0 || indexOf === 11 || indexOf === 27)
+    return;
+
+  var date = formatDate(line, file);
+
+  return {
+    date: date,
+    value: line.replace(/\[([^\]]+)\]/, '').trim()
+  };
 }
 
 function formatDate(line, file){
