@@ -73,9 +73,11 @@ describe('formatLine()', function(){
 describe('formatDate()', function(){
   it('should format date correctly', function(){
     var result = textual.formatDate('[2014-06-30T18:09:52+0800] <mts> inception', file);
-    var expected = '2014-06-30T18:09:52';
+    var date = '2014-06-30T';
+    var time = ':09:52';
 
-    assert.include(result, expected);
+    assert.include(result, date);
+    assert.include(result, time);
   });
 
   it('should format date correctly even when not full timestamp', function(){
