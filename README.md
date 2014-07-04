@@ -42,3 +42,6 @@ $ textual-log-parser --help
 Usage
   $ textual-log-parser <directory>
 ```
+
+## License
+MIT © [Matias Singers](http://mts.io)
