@@ -4,7 +4,7 @@
 var fs = require('fs');
 
 var pkg = require('./package.json');
-var parser = require('./index');
+var parser = require('./index').parse;
 var input = process.argv[2];
 
 function help() {

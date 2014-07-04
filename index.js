@@ -83,4 +83,6 @@ function formatDate(line, file){
   return moment(date).format();
 }
 
-module.exports = parse;
+module.exports = {
+  parse: parse
+};
