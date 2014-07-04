@@ -89,5 +89,7 @@ function formatDate(line, file){
 }
 
 module.exports = {
-  parse: parse
+  parse: parse,
+  formatDate: formatDate,
+  formatLine: formatLine
 };
