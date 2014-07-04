@@ -1,4 +1,4 @@
-# textual-log-parser
+# textual-log-parser [![Build Status](https://api.shippable.com/projects/53b6b88fd8934476004bcbe4/badge/master)](https://www.shippable.com/projects/53b6b88fd8934476004bcbe4)
 > parses Textual log files and returns JavaScript objects
 
 ## Features:
