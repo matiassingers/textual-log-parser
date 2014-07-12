@@ -16,11 +16,7 @@ function parse(directory, callback){
   dir = directory;
 
   var directoryParts = path.resolve(directory).split(path.sep);
-  var meta = {
-    server: directoryParts[directoryParts.length - 3],
-    type: directoryParts[directoryParts.length - 2].toLowerCase(),
-    title: directoryParts[directoryParts.length - 1]
-  };
+  var meta = metaDetails(directoryParts);
   console.log('parsing logs for ' + meta.title);
 
   return fs.readdir(directory, function(error, files){
@@ -32,6 +28,14 @@ function parse(directory, callback){
       return callback(results, results.length, meta);
     });
   });
+}
+
+function metaDetails(parts){
+  return {
+    server: parts[parts.length - 3],
+    type: parts[parts.length - 2].toLowerCase(),
+    title: parts[parts.length - 1]
+  };
 }
 
 function readFileContent(file, callback){
