@@ -4,7 +4,7 @@
   "description": "Parses Textual log files and returns JavaScript objects",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -R spec"
   },
   "bin": {
     "textual-log-parser": "cli.js"
