@@ -23,7 +23,7 @@ describe('formatLine()', function(){
       assert.isUndefined(line, 'discarded semi-empty');
     });
 
-    describe('should handle session lines', function(){
+    describe('should discard session lines', function(){
       it('beginning of the line - begin', function(){
         var line = textual.formatLine('————————————— Begin Session —————————————', file);
         assert.isUndefined(line);
