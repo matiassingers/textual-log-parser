@@ -68,11 +68,9 @@ function formatLine(line, file){
   if(indexOf === 0 || indexOf === 11 || indexOf === 27)
     return;
 
-  var date = formatDate(line, file);
-
   return {
-    date: date,
-    value: line.replace(/\[([^\]]+)\]/, '').trim()
+    date: formatDate.apply(this, arguments),
+    value: trimLine(line)
   };
 }
 
@@ -88,8 +86,13 @@ function formatDate(line, file){
   return moment(date).format();
 }
 
+function trimLine(line){
+  return line.replace(/\[([^\]]+)\]/, '').trim();
+}
+
 module.exports = {
   parse: parse,
   formatDate: formatDate,
+  trimLine: trimLine,
   formatLine: formatLine
 };

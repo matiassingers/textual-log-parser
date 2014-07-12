@@ -87,3 +87,17 @@ describe('formatDate()', function(){
     assert.include(result, expected);
   });
 });
+
+describe("trimLine()", function() {
+  it("should remove full timestamp from lines", function() {
+    assert.equal(textual.trimLine('[2014-06-30T18:09:52+0800] <mts> inception'), '<mts> inception');
+  });
+
+  it("should remove small timestamp from lines", function() {
+    assert.equal(textual.trimLine('[14:46:29] <mts_> oy stkhlm '), '<mts_> oy stkhlm');
+  });
+
+  it("should trim ending whitespace", function() {
+    assert.equal(textual.trimLine('asd  '), 'asd');
+  });
+});
