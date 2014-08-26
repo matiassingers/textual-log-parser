@@ -11,7 +11,7 @@ function help() {
   console.log(pkg.description);
   console.log('');
   console.log('Usage');
-  console.log('  $ textual-log-parser ~/Documents/Textual\\ logs/Freenode/Channels/#braws');
+  console.log('  $ textual-log-parser ~/Documents/Textual\\ logs/Freenode/Channels/#atp');
 }
 
 if (!input || process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1) {
