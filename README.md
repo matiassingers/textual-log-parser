@@ -1,4 +1,4 @@
-# textual-log-parser [![Build Status](https://api.shippable.com/projects/53b6b88fd8934476004bcbe4/badge/master)](https://www.shippable.com/projects/53b6b88fd8934476004bcbe4)
+# textual-log-parser [![Build Status](http://img.shields.io/travis/matiassingers/textual-log-parser.svg?style=flat-square)](https://travis-ci.org/matiassingers/textual-log-parser) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/textual-log-parser.svg?style=flat-square)](https://gemnasium.com/matiassingers/textual-log-parser)
 > parses Textual log files and returns JavaScript objects
 
 ## Features:
