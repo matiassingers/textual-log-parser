@@ -1,4 +1,5 @@
 # textual-log-parser [![Build Status](http://img.shields.io/travis/matiassingers/textual-log-parser.svg?style=flat-square)](https://travis-ci.org/matiassingers/textual-log-parser) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/textual-log-parser.svg?style=flat-square)](https://gemnasium.com/matiassingers/textual-log-parser)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/matiassingers/textual-log-parser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 > parses Textual log files and returns JavaScript objects
 
 ## Features:
